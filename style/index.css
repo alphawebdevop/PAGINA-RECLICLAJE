@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(232, 236, 228);
+}
+
+#wrapper{
+    width: 100%; min-height: 84.5vh;
+    margin-inline: auto;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+header{
+    outline: 1px solid black;
+    width: 100%; min-height: 15vh;
+    background-color: rgb(101, 175, 82);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: 1rem 2rem ;
+    box-shadow: 3px 3px 3px #333;
+}
+
+header #logo{
+    cursor: pointer;
+    padding: .3rem;
+    border-radius: .4rem;
+    box-shadow: 3px 3px 3px #333;
+    background-color: aliceblue;
+}
+
+nav{
+    /* outline: 1px solid black; */
+    font-size: 1.8rem;
+    flex: 1;
+    
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    letter-spacing: .13rem;
+}
+
+/* .nav-horizontal > *{outline: 1px solid black} */
+
+.nav-horizontal{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    text-align: center;
+}
+
+.nav-horizontal  a{
+    cursor: default;
+    /* box-shadow: 3px 3px 3px #333; */
+    border-radius: .2rem;
+    padding: 1rem 1.2rem;
+    margin-top: .2rem;  
+}
+
+.nav-horizontal > li:hover .nav-vertical{
+    display: block;
+}
+
+.nav-vertical{
+    list-style: none;
+    position: absolute;
+    display: none;
+    background-color: rgb(101, 175, 82);
+    border-radius: 0rem 0rem 2rem 2rem;
+    overflow: hidden;
+    margin-top: 1rem;
+   
+}
+
+.nav-vertical a{
+    cursor: pointer;
+    /* text-align: center;
+    color: red; */
+}
+
+.nav-vertical li{
+    padding: .6rem 1rem;
+    text-align: center;
+    
+}
+
+.nav-vertical  li :hover{
+    background-color: rgba(203, 217, 200, 0.64);
+    border-radius: 6rem;
+}
+
+
+#not_found{
+    max-width: 22rem;
+    margin-inline: auto;
+    background-color: red;
+    color: white;
+    font-size: 1.4;
+    padding: .5rem .8rem;
+    margin-bottom: 3rem;;
+    border-radius: .6rem;
+}
+
+
+
+/* header button{
+    font-size: 1.8rem;
+    padding: .6rem .9rem;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 3px 3px 3px rgb(97 137 68);
+    background-color: rgb(84 227 30);
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+header button:hover{
+    background-color: rgba(82, 227, 30, 0.446);
+    transition: all, .4s;
+} */
+
+
+/* LANDING.PHP */
+
+.landing-section{
+    height: 80%;
+    font-size: 3rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    transition: all, 0.4s;
+}
+
+
+/* DONDE_TIRAR_COSAS.PHP */
+
+.d_t_c{
+    width: 100%;
+}
+
+.info-cont{
+    outline: 2px solid black;
+    border-radius: .4rem;
+    background-color: whitesmoke;
+    max-width: 80%;
+    min-height: 10vh;
+    margin: 3rem auto;
+    margin-bottom: 3rem;
+    padding: 2rem 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.info-cont .contenedor-title{
+    font-size: 2rem;
+}
+.info-cont h3{
+    font-size: 1.8rem;
+}
+
+.info-cont ul{
+    list-style: none;
+    text-align: justify;
+}
+
+.info-cont li{
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.si img{width: 20px;}
+.no img{width: 20px;}
+
+.contenedor-img{
+    width: 200px;
+    margin-top: 1rem;
+}
+
+.info-cont > *{
+    /* outline: 1px solid black; */
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    padding: 0 .8rem .8rem .8rem .8rem;
+}
+
+.info-cont:last-child{
+    margin-bottom: 6rem;
+}
+
+.card{
+    width: min-content;
+    box-shadow: 3px 3px 3px #333;
+}
+
+@media screen and (max-width: 1178px){
+
+    .info-cont{
+        flex-flow: column wrap;
+        height: 20rem;
+    }
+
+    .cont-contenedor{
+        order: 5;
+    }
+    
+}
+
+@media screen and (max-width: 802px){
+
+    .info-cont{
+        flex-flow: column wrap;
+        height: auto;
+        /* background-color: black; */
+    }
+
+    .cont-lista-no{
+        order: 6;
+    }
+
+}
+
+/* FOOTER*/
+footer{
+    width: 100%; min-height: 6vh;
+    margin-top: 5rem;
+    padding: .7rem 2rem;
+    background-color: black;
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 1.1rem;
+    letter-spacing: 0.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#first{
+    border-right: 3px solid white;
+    display: flex;
+    align-items: center;
+}
+
+#autor{
+    margin-right: .8rem;
+}
+
+#second{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-basis: 16%;    
+}
+#git{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .4rem;
+    margin-left: .8rem;
+}
+
+#git p a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+/* LOCALIZADOR ELEMETOS.PHP */
+.localizador-elementos h1{
+    margin-top: 1rem;
+    font-size: 2.7rem;
+}
+
+.localizador-elementos select,
+.localizador-elementos input,
+.localizador-elementos button a{
+    font-size: 1.3rem;
+}
+
+.localizador-elementos button{
+    margin-top: 1rem;
+}
+
+.localizador-elementos button a{
+    color: black;
+    text-decoration: none;
+}
+
+#localizador-wrapper{
+    width: 95%; min-height: 100%;
+    margin: 3rem auto;
+    text-align: center;
+    font-size: 1.3rem;
+    /* outline: 1px solid black; */
+}
+
+.aviso-objeto-encontrado{
+    outline: 1px solid black;
+    max-width: 25rem;
+    min-height: 1vh;
+    padding: 2rem;
+    background-color: azure;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-inline: auto;
+    /* position: absolute;
+    top: 5rem; */
+}
+
+.aviso-objeto-encontrado button{
+    width: 40%;
+}
+
+.aviso-objeto-encontrado button a{
+    text-decoration: none;
+}
+
+.mas-opciones{
+    outline: 1px solid black;
+    max-width: 45rem;
+    min-height: 1vh;
+    padding: 2rem;
+    background-color: azure;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-inline: auto;
+}
